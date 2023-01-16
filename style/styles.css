@@ -33,6 +33,7 @@ header,
 main {
     max-width: 1280px;
     margin: auto;
+    padding: 0px 20px;
 }
 
 .banner_img img:hover,
@@ -42,7 +43,7 @@ main {
 }
 /* header start */
 header {
-    padding-bottom: 50px;
+    padding-bottom: 50px 20px;
 }
 
 /* navbar start */
@@ -287,4 +288,44 @@ footer {
     background-color: #221f42;
     color: var(--fifth-text-color);
     border-radius: 100px;
+}
+/* responsive for tablet device */
+@media only screen and (max-width:992px){
+    
+    .banner,
+    .featured_section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner_info,
+    .featured_info {
+        text-align: center;
+    }
+    .banner_img {
+        width: 90%;
+        background-position: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sponsor_section{
+        flex-wrap: wrap;
+        column-gap: 100px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .popular_cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .featured_section{
+        row-gap: 20px;
+    }
+}
+/* responsive for tablet device */
+@media only screen and (max-width:688px){
+    .navbar{
+        flex-direction: column;
+    }
+    .popular_cards{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
